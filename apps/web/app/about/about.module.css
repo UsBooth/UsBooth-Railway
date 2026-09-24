@@ -1,0 +1,870 @@
+.page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 70% 8%,
+      rgba(181, 105, 80, 0.16),
+      transparent 30rem
+    ),
+    linear-gradient(
+      145deg,
+      #1c1110,
+      #2b1c18 58%,
+      #140d0c
+    );
+
+  color: #f0dfce;
+
+  padding: 0 6vw 70px;
+
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  max-width: 900px;
+  margin: auto;
+
+  padding: 110px 0 90px;
+
+  text-align: center;
+}
+
+.eyebrow,
+.storyHeading > span,
+.sectionHeading > span,
+.contact > span,
+.rating > div > span {
+  display: block;
+
+  color: #c99778;
+
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 18px 0 28px;
+
+  font:
+    500 clamp(56px, 8vw, 94px) / 0.86
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+.hero h1 em,
+.story h2 em,
+.sectionHeading h2 em,
+.rating h2 em {
+  color: #c86d69;
+  font-style: italic;
+}
+
+.hero p {
+  max-width: 690px;
+  margin: auto;
+
+  color: #b9a193;
+
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.sectionHeading h2,
+.rating h2 {
+  margin: 15px 0;
+
+  font:
+    400 clamp(38px, 4vw, 55px) / 0.95
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+.sectionHeading > p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #aa9385;
+
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   QUICK HELP
+   ========================================================= */
+
+.quickHelp {
+  max-width: 1000px;
+
+  margin: auto;
+
+  padding: 65px 0 75px;
+
+  border-top: 1px solid rgba(239, 215, 194, 0.13);
+  border-bottom: 1px solid rgba(239, 215, 194, 0.13);
+}
+
+.quickGrid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+.quickCard {
+  box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-columns: 34px minmax(0, 1fr) 24px;
+
+  align-items: center;
+
+  gap: 15px;
+
+  width: 100%;
+
+  min-height: 105px;
+
+  padding: 20px 21px;
+
+  border: 1px solid rgba(239, 215, 194, 0.13);
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(83, 53, 43, 0.30),
+      rgba(27, 16, 14, 0.38)
+    );
+
+  color: #f0dfce;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.quickCard:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(200, 109, 105, 0.42);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(142, 75, 70, 0.20),
+      rgba(45, 26, 23, 0.48)
+    );
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+.quickCard > span {
+  align-self: start;
+
+  padding-top: 3px;
+
+  color: #c86d69;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.quickCard > div {
+  min-width: 0;
+}
+
+.quickCard h3 {
+  margin: 0 0 6px;
+
+  color: #f0dfce;
+
+  font:
+    400 27px / 1
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+.quickCard p {
+  margin: 0;
+
+  color: #a99284;
+
+  font-size: 10px;
+
+  line-height: 1.65;
+}
+
+.quickCard strong {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 27px;
+  height: 27px;
+
+  border: 1px solid rgba(200, 109, 105, 0.25);
+
+  border-radius: 50%;
+
+  color: #d48b7d;
+
+  background: rgba(200, 109, 105, 0.07);
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease;
+}
+
+.quickCard:hover strong {
+  transform: translateX(2px);
+
+  background: rgba(200, 109, 105, 0.16);
+}
+
+/* =========================================================
+   ABOUT / STORY
+   ========================================================= */
+
+.story {
+  max-width: 1000px;
+
+  margin: auto;
+
+  padding: 70px 0;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(280px, 0.85fr)
+    minmax(320px, 1.15fr);
+
+  gap: 70px;
+
+  align-items: start;
+}
+
+.story h2 {
+  margin: 15px 0 0;
+
+  font:
+    400 clamp(38px, 4vw, 58px) / 0.95
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+.storyCopy {
+  padding-top: 5px;
+}
+
+.storyCopy p {
+  margin: 0 0 20px;
+
+  color: #b39b8b;
+
+  font-size: 12px;
+
+  line-height: 1.9;
+}
+
+/* =========================================================
+   VALUES
+   ========================================================= */
+
+.values {
+  max-width: 1000px;
+
+  margin: auto;
+
+  padding-top: 15px;
+}
+
+.valueGrid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.valueGrid article {
+  min-height: 205px;
+
+  padding: 28px;
+
+  border: 1px solid rgba(239, 215, 194, 0.13);
+
+  border-radius: 12px;
+
+  background: rgba(83, 53, 43, 0.18);
+}
+
+.number {
+  color: #c86d69;
+
+  font-size: 10px;
+
+  letter-spacing: 0.16em;
+}
+
+.valueGrid h3 {
+  margin: 35px 0 10px;
+
+  font:
+    400 28px
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+.valueGrid p {
+  margin: 0;
+
+  color: #a99284;
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   HELP & SUPPORT
+   ========================================================= */
+
+.help {
+  max-width: 1000px;
+
+  margin: 80px auto 0;
+
+  padding-top: 70px;
+
+  border-top: 1px solid rgba(239, 215, 194, 0.10);
+}
+
+.helpGrid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.helpCard {
+  box-sizing: border-box;
+
+  display: block;
+
+  min-height: 190px;
+
+  padding: 26px 27px;
+
+  border: 1px solid rgba(239, 215, 194, 0.13);
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(83, 53, 43, 0.25),
+      rgba(27, 16, 14, 0.38)
+    );
+
+  color: #f0dfce;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.helpCard:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(200, 109, 105, 0.42);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(142, 75, 70, 0.17),
+      rgba(27, 16, 14, 0.45)
+    );
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.helpCard > span {
+  color: #c99778;
+
+  font-size: 8px;
+
+  letter-spacing: 0.18em;
+}
+
+.helpCard h3 {
+  margin: 16px 0 9px;
+
+  color: #f0dfce;
+
+  font:
+    400 27px / 1
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+.helpCard p {
+  min-height: 38px;
+
+  margin: 0;
+
+  color: #a99284;
+
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+.helpCard strong {
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-top: 18px;
+
+  color: #d48b7d;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.10em;
+
+  transition:
+    transform 0.18s ease;
+}
+
+.helpCard:hover strong {
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   RATING
+   ========================================================= */
+
+.rating {
+  max-width: 1000px;
+
+  margin: 85px auto 0;
+
+  padding: 35px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(280px, 0.9fr)
+    minmax(360px, 1.1fr);
+
+  gap: 45px;
+
+  border: 1px solid rgba(200, 109, 105, 0.22);
+
+  border-radius: 14px;
+
+  background: rgba(142, 75, 70, 0.10);
+}
+
+.rating p {
+  max-width: 520px;
+
+  margin: 0;
+
+  color: #aa9385;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+.ratingOptions {
+  display: grid;
+
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  gap: 8px;
+
+  align-items: center;
+}
+
+.ratingButton {
+  min-height: 105px;
+
+  padding: 15px 8px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid rgba(239, 215, 194, 0.12);
+
+  border-radius: 10px;
+
+  background: rgba(35, 21, 18, 0.40);
+
+  color: #f0dfce;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.ratingButton:hover {
+  transform: translateY(-3px);
+
+  background: rgba(200, 109, 105, 0.16);
+
+  border-color: rgba(200, 109, 105, 0.45);
+}
+
+.ratingButton span {
+  color: #d48b7d;
+
+  font-size: 15px;
+}
+
+.ratingButton strong {
+  margin-top: 5px;
+
+  font-size: 16px;
+}
+
+.ratingButton small {
+  margin-top: 3px;
+
+  color: #9f887a;
+
+  font-size: 7px;
+
+  text-align: center;
+}
+
+.ratingNote {
+  grid-column: 1 / -1;
+
+  padding-top: 8px;
+
+  border-top: 1px solid rgba(239, 215, 194, 0.10);
+
+  color: #9f887a;
+
+  font-size: 9px;
+}
+
+.ratingNote a {
+  color: #d48b7d;
+
+  text-decoration: none;
+}
+
+.ratingNote a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact {
+  max-width: 1000px;
+
+  margin: 80px auto 0;
+
+  padding: 34px;
+
+  border: 1px solid rgba(200, 109, 105, 0.25);
+
+  border-radius: 12px;
+
+  background: rgba(142, 75, 70, 0.10);
+}
+
+.contact h2 {
+  margin: 14px 0 8px;
+
+  font:
+    400 34px
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+.contact p {
+  margin: 0;
+
+  color: #aa9385;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+.contact a {
+  display: inline-flex;
+
+  margin-top: 15px;
+
+  color: #d48b7d;
+
+  font-size: 10px;
+
+  text-decoration: none;
+
+  letter-spacing: 0.04em;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   BACK
+   ========================================================= */
+
+.back {
+  max-width: 1000px;
+
+  margin: 30px auto 0;
+}
+
+.back a {
+  color: #9e887a;
+
+  font-size: 9px;
+
+  letter-spacing: 0.1em;
+
+  text-decoration: none;
+}
+
+.back a:hover {
+  color: #d48b7d;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .story,
+  .rating {
+    grid-template-columns: 1fr;
+  }
+
+  .valueGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .helpGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ratingOptions {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+  .page {
+    padding: 0 20px 50px;
+  }
+
+  .hero {
+    padding-top: 75px;
+    padding-bottom: 65px;
+  }
+
+  .quickHelp {
+    padding-top: 55px;
+    padding-bottom: 60px;
+  }
+
+  .quickGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .quickCard {
+    min-height: 96px;
+  }
+
+  .quickCard h3 {
+    font-size: 25px;
+  }
+
+  .story {
+    padding: 60px 0;
+    gap: 35px;
+  }
+
+  .help {
+    margin-top: 60px;
+    padding-top: 55px;
+  }
+
+  .rating {
+    padding: 24px;
+  }
+
+  .ratingOptions {
+    gap: 5px;
+  }
+
+  .ratingButton {
+    min-height: 85px;
+    padding: 10px 5px;
+  }
+
+  .ratingButton small {
+    font-size: 6px;
+  }
+
+  .contact {
+    margin-top: 60px;
+    padding: 26px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+  .quickCard {
+    grid-template-columns: 28px minmax(0, 1fr) 20px;
+
+    gap: 10px;
+
+    padding: 17px;
+  }
+
+  .quickCard h3 {
+    font-size: 23px;
+  }
+
+  .quickCard p {
+    font-size: 9px;
+  }
+
+  .helpCard {
+    min-height: 175px;
+
+    padding: 23px;
+  }
+
+  .rating {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .ratingOptions {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+
+/* DREAMY HELP + ABOUT — like a handwritten letter on soft paper */
+.page{
+  background:
+    radial-gradient(circle at 10% 6%,rgba(232,200,205,.30),transparent 27rem),
+    radial-gradient(circle at 90% 30%,rgba(201,192,216,.28),transparent 27rem),
+    linear-gradient(180deg,#FBF7F2 0%,#F7F0EE 55%,#EEEAF2 100%);
+  color:#44373F;
+  position:relative;
+}
+.page::after{
+  content:"✦";
+  position:absolute;top:150px;left:5%;
+  color:rgba(117,103,127,.20);font-size:25px;
+  text-shadow:35px 45px 0 rgba(139,63,80,.10);
+  pointer-events:none;
+}
+.hero h1,.sectionHeading h2,.rating h2,.story h2{color:#40343B}
+.eyebrow,.storyHeading>span,.sectionHeading>span,.contact>span,.rating>div>span{color:#9A6B78}
+.hero h1 em,.story h2 em,.sectionHeading h2 em,.rating h2 em{color:#875267}
+.hero p,.sectionHeading>p,.storyCopy p,.rating p,.contact p{color:#8D7D84}
+.quickHelp{border-color:#E1D5D8}
+.quickCard,.helpCard,.valueGrid article{
+  border-color:#E0D3D7;
+  background:rgba(255,253,250,.70);
+  color:#44373F;
+  box-shadow:0 16px 45px rgba(72,50,60,.08);
+}
+.quickCard:hover,.helpCard:hover{
+  border-color:#C69DA7;
+  background:linear-gradient(145deg,#F8E9EB,#EEE9F2);
+  box-shadow:0 20px 55px rgba(72,50,60,.11);
+}
+.quickCard>span,.helpCard>span,.number{color:#9A6B78}
+.quickCard h3,.helpCard h3,.valueGrid h3,.contact h2{color:#4A3941}
+.quickCard p,.helpCard p,.valueGrid p{color:#897980}
+.quickCard strong{border-color:#D5B7BF;color:#8B3F50;background:rgba(139,63,80,.06)}
+.rating,.contact{border-color:#DEC5CC;background:rgba(255,253,250,.64);box-shadow:0 18px 55px rgba(72,50,60,.08)}
+.ratingButton{border-color:#DED1D5;background:rgba(255,253,250,.70);color:#44373F}
+.ratingButton:hover{background:#F3E4E6;border-color:#C69DA7}
+.ratingButton span,.contact a{color:#8B3F50}
+.ratingButton small,.ratingNote,.back a{color:#8D7D84}
+.contact a:hover,.back a:hover{color:#713040}
+
+
+/* ZIP DREAM PALETTE — help & about */
+.page{background:radial-gradient(circle at 10% 5%,rgba(200,109,105,.14),transparent 27rem),radial-gradient(circle at 90% 30%,rgba(201,151,120,.10),transparent 28rem),linear-gradient(180deg,#211613,#30211D 55%,#241714)!important;color:#E7D4BA!important}.hero h1,.sectionHeading h2,.rating h2,.story h2,.contact h2{color:#F3E5D2!important}.eyebrow,.storyHeading>span,.sectionHeading>span,.contact>span,.rating>div>span{color:#C99778!important}.hero h1 em,.story h2 em,.sectionHeading h2 em,.rating h2 em{color:#D48B7D!important}.hero p,.sectionHeading>p,.storyCopy p,.rating p,.contact p{color:#BCA28C!important}.quickHelp,.help{border-color:#76534C!important}.quickCard,.helpCard,.valueGrid article,.rating,.contact{background:rgba(70,49,42,.88)!important;border-color:#76534C!important;color:#E7D4BA!important;box-shadow:0 18px 55px rgba(15,9,7,.22)!important}.quickCard:hover,.helpCard:hover{background:linear-gradient(145deg,#50372E,#3A2823)!important;border-color:#C86D69!important}.quickCard h3,.helpCard h3,.valueGrid h3{color:#F3E5D2!important}.quickCard p,.helpCard p,.valueGrid p{color:#BCA28C!important}.quickCard>span,.helpCard>span,.number{color:#D48B7D!important}.quickCard strong{border-color:#A95D5B!important;color:#D48B7D!important;background:#3A2823!important}.ratingButton{background:#3A2823!important;border-color:#76534C!important;color:#F3E5D2!important}.ratingButton:hover{background:#50372E!important;border-color:#C86D69!important}.ratingButton span,.contact a{color:#D48B7D!important}.ratingButton small,.ratingNote,.back a{color:#A88E80!important}.contact a:hover,.back a:hover{color:#D48B7D!important}

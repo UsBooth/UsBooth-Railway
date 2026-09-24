@@ -1,0 +1,63 @@
+.page{min-height:100vh;background:radial-gradient(circle at 50% 8%,rgba(185,107,82,.18),transparent 30rem),linear-gradient(145deg,#1a100f,#2b1b17 60%,#120b0a);color:#f1dfce;padding:0 6vw 70px;font-family:"DM Sans",Arial,sans-serif}.header{max-width:1100px;height:78px;margin:auto;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(239,215,194,.13)}.logo{color:#f0dfce;font-size:13px;font-weight:700;text-decoration:none}.logo span{color:#c86d69}.modeBadge{color:#c99778;font-size:8px;letter-spacing:.18em}.exit{color:#b9a294;font-size:9px;text-decoration:none}.hero{max-width:850px;margin:auto;padding:85px 0 55px;text-align:center}.eyebrow,.sectionHead>div>span,.footerNote>span{color:#c99778;font-size:9px;letter-spacing:.25em}.hero h1{margin:18px 0;font:500 clamp(52px,8vw,88px)/.86 "Cormorant Garamond",Georgia,serif}.hero h1 em,.sectionHead h2 em{color:#c86d69}.hero p{max-width:650px;margin:auto;color:#ad9586;font-size:12px;line-height:1.8}.studio{max-width:900px;margin:auto}.cameraCard{border:1px solid rgba(239,215,194,.15);border-radius:14px;overflow:hidden;background:rgba(47,29,24,.35)}.cameraHeader{height:42px;padding:0 15px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(239,215,194,.1);color:#c9b8aa;font-size:8px;letter-spacing:.1em}.live{color:#d45b60}.cameraFeed{position:relative;aspect-ratio:16/10;background:#110b0a;overflow:hidden}.video,.previewVideo{width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}.hidden{display:none}.placeholder{position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:8px;color:#8f8177;text-align:center}.placeholder span{font-size:40px;color:#c86d69}.placeholder strong{font-size:10px;letter-spacing:.14em}.placeholder small{font-size:8px}.countdown{position:absolute;inset:0;display:grid;place-items:center;background:rgba(20,10,9,.25);font:500 100px/1 "Cormorant Garamond",Georgia,serif;color:#f1dfce;text-shadow:0 5px 30px rgba(0,0,0,.35)}.controls{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px;margin-top:18px}.controls small{width:100%;text-align:center;color:#8f8177;font-size:8px;letter-spacing:.1em}.primary,.secondary{min-height:42px;padding:0 17px;border-radius:8px;font-size:8px;font-weight:800;letter-spacing:.1em;cursor:pointer}.primary{border:0;background:#a95b5d;color:#fff}.secondary{border:1px solid #3b302b;background:rgba(255,255,255,.02);color:#c9bba8}.primary:disabled,.shutter:disabled{opacity:.45;cursor:not-allowed}.shutter{width:78px;height:78px;border-radius:50%;border:7px solid #c86d69;background:#fff;box-shadow:0 0 0 5px rgba(200,109,105,.12);cursor:pointer}.shutter span{display:block;width:54px;height:54px;border-radius:50%;background:#fff}.hiddenCanvas,.hiddenPreview{display:none}.error{max-width:900px;margin:18px auto;padding:12px 15px;border:1px solid rgba(212,91,96,.35);border-radius:9px;background:rgba(183,63,69,.1);color:#f0c5c1;font-size:10px}.previewSection{max-width:1000px;margin:70px auto 0;padding-top:50px;border-top:1px solid rgba(239,215,194,.12)}.sectionHead{display:flex;justify-content:space-between;gap:30px;align-items:end}.sectionHead h2{margin:14px 0 0;font:400 clamp(38px,5vw,58px)/.95 "Cormorant Garamond",Georgia,serif}.sectionHead p{max-width:320px;color:#a88e80;font-size:10px;line-height:1.8}.previewWrap{display:flex;justify-content:center;margin:35px 0}.livePreview{position:relative;width:min(520px,90vw);aspect-ratio:4/5;padding:18px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.28)}.previewTop{position:absolute;left:18px;right:18px;top:10px;display:flex;justify-content:space-between;font-size:8px;letter-spacing:.1em}.previewBottom{position:absolute;left:18px;right:18px;bottom:12px;text-align:center;font:14px Georgia,serif}.finalPhoto{max-width:min(520px,90vw);max-height:650px;width:auto;height:auto;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.28)}.styleGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.styleButton{min-height:64px;text-align:left;padding:11px;border:1px solid rgba(239,215,194,.12);border-radius:9px;background:rgba(84,54,44,.16);color:#f1dfce;cursor:pointer}.styleButton span{display:block;color:#c99778;font-size:7px;letter-spacing:.15em}.styleButton strong{display:block;margin-top:7px;font-size:9px}.captionInput{min-height:64px;box-sizing:border-box;border:1px solid rgba(239,215,194,.12);border-radius:9px;background:rgba(20,11,10,.45);color:#f1dfce;padding:12px;font:10px Arial;outline:none}.resultActions{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin-top:20px}.footerNote{max-width:1000px;margin:70px auto 0;padding-top:25px;border-top:1px solid rgba(239,215,194,.1)}.footerNote p{max-width:650px;color:#9f887a;font-size:10px;line-height:1.8}.footerNote a{color:#d48b7d;font-size:9px;text-decoration:none}.modalBackdrop{position:fixed;inset:0;z-index:1000;background:rgba(20,12,12,.78);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;padding:20px}.templateModal{width:min(900px,94vw);max-height:90vh;overflow:auto;padding:26px;border:1px solid rgba(239,215,194,.16);border-radius:16px;background:#241613;box-shadow:0 30px 100px rgba(0,0,0,.45)}.modalHead{display:flex;justify-content:space-between;align-items:start;margin-bottom:20px}.modalHead span{color:#c99778;font-size:8px;letter-spacing:.18em}.modalHead h2{margin:10px 0 0;font:400 34px Georgia,serif}.modalHead button{border:0;background:none;color:#d9c5b5;font-size:25px;cursor:pointer}.templateGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.templateChoice{min-height:120px;padding:15px;text-align:left;border:1px solid;border-radius:10px;color:#f1dfce;cursor:pointer}.templateChoice>span{display:grid;place-items:center;width:25px;height:25px;border-radius:50%;font-size:12px}.templateChoice strong{display:block;margin-top:18px;font:400 20px Georgia,serif}.templateChoice small{display:block;margin-top:5px;color:#a88e80;font-size:8px}.selected{box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+@media(max-width:800px){.styleGrid{grid-template-columns:repeat(2,1fr)}.sectionHead{align-items:start;flex-direction:column}.templateGrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.header{height:auto;padding:18px 0;gap:12px}.modeBadge{font-size:7px}.styleGrid{grid-template-columns:1fr}.templateGrid{grid-template-columns:1fr}.hero{padding-top:65px}}
+
+
+/* DREAMY QUICK BOOTH — soft midnight studio inspired by the UsBooth logo */
+.page{
+  background:
+    radial-gradient(circle at 50% 6%,rgba(118,103,133,.34),transparent 28rem),
+    radial-gradient(circle at 12% 35%,rgba(139,63,80,.20),transparent 25rem),
+    radial-gradient(circle at 90% 72%,rgba(201,192,216,.16),transparent 24rem),
+    linear-gradient(145deg,#30272D,#3C3038 58%,#282229);
+  color:#F7EEE8;
+}
+.page::before{
+  content:"✦";
+  position:absolute;top:125px;right:10%;
+  color:rgba(232,200,205,.34);
+  font-size:28px;
+  text-shadow:0 0 28px rgba(232,200,205,.25);
+}
+.header{border-color:rgba(232,200,205,.13)}
+.logo{color:#FBF3EE}.logo span{color:#D49AA5}
+.modeBadge,.eyebrow,.sectionHead>div>span,.footerNote>span{color:#D1A0AA}
+.exit{color:#C8B8BB}
+.hero h1{color:#FBF3EE;text-shadow:0 8px 35px rgba(0,0,0,.18)}
+.hero h1 em,.sectionHead h2 em{color:#D7A0AE}
+.hero p,.sectionHead p,.footerNote p{color:#C2B2B7}
+.cameraCard{
+  border-color:rgba(232,200,205,.16);
+  background:rgba(28,21,26,.42);
+  box-shadow:0 25px 80px rgba(15,10,14,.25);
+  backdrop-filter:blur(10px);
+}
+.cameraHeader{border-color:rgba(232,200,205,.10);color:#D5C9CC}
+.live{color:#E49AA3}
+.cameraFeed{background:#211B20}
+.placeholder{color:#A99BA1}.placeholder span{color:#D49AA5}
+.countdown{background:rgba(32,23,29,.32);color:#FBF1EB}
+.primary{background:#8B3F50}.secondary{border-color:#5A4A53;background:rgba(255,255,255,.04);color:#E2D7D8}
+.shutter{border-color:#D49AA5;background:#FFF9F5;box-shadow:0 0 0 6px rgba(212,154,165,.12),0 15px 35px rgba(0,0,0,.18)}
+.shutter span{background:#FFF9F5}
+.previewSection{border-color:rgba(232,200,205,.12)}
+.livePreview{box-shadow:0 25px 80px rgba(12,8,11,.34)}
+.styleButton,.captionInput{
+  border-color:rgba(232,200,205,.13);
+  background:rgba(255,249,245,.055);
+  color:#F5EAE6;
+}
+.styleButton span{color:#D1A0AA}
+.captionInput{background:rgba(20,14,18,.46)}
+.modalBackdrop{background:rgba(39,29,36,.72)}
+.templateModal{
+  border-color:rgba(232,200,205,.17);
+  background:
+    radial-gradient(circle at 80% 0%,rgba(201,192,216,.13),transparent 20rem),
+    #30272D;
+  box-shadow:0 30px 100px rgba(0,0,0,.45);
+}
+.modalHead span{color:#D1A0AA}.modalHead h2{color:#FBF1EC}
+.templateChoice{color:#F7EEE8;border-color:rgba(232,200,205,.14)!important;background:rgba(255,249,245,.045)}
+.templateChoice>span{background:rgba(212,154,165,.12);color:#D49AA5}
+.templateChoice small{color:#B5A6AA}
+.selected{box-shadow:inset 0 0 0 1px rgba(232,200,205,.42)}

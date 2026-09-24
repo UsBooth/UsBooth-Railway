@@ -1,0 +1,1775 @@
+.account-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 78% 5%,
+      rgba(183, 102, 87, 0.16),
+      transparent 28rem
+    ),
+    linear-gradient(
+      145deg,
+      #211714 0%,
+      #2b1d19 55%,
+      #17100f 100%
+    );
+
+  color: #f1e2d2;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.account-page::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.035;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.account-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.account-nav {
+  width: min(
+    1180px,
+    calc(100% - 60px)
+  );
+
+  height: 76px;
+
+  margin: auto;
+
+  border-bottom: 1px solid
+    rgba(239, 215, 194, 0.14);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account-logo {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.account-logo span {
+  color: #c86d69;
+  margin-left: 2px;
+}
+
+.account-nav-right {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.user-email {
+  color: #bda99a;
+
+  font-size: 9px;
+
+  letter-spacing: 0.08em;
+}
+
+.logout-button {
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid
+    rgba(239, 215, 194, 0.25);
+
+  color: #d8c6b5;
+
+  padding: 10px 14px;
+
+  border-radius: 8px;
+
+  font:
+    600 9px "DM Sans",
+    sans-serif;
+
+  letter-spacing: 0.12em;
+
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  border-color: rgba(
+    200,
+    109,
+    105,
+    0.45
+  );
+
+  color: #f0dfce;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.account-hero {
+  width: min(
+    1180px,
+    calc(100% - 60px)
+  );
+
+  min-height: 330px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  border-bottom: 1px solid
+    rgba(239, 215, 194, 0.12);
+}
+
+.account-hero-copy {
+  max-width: 650px;
+}
+
+.account-eyebrow {
+  color: #c69477;
+
+  font-size: 9px;
+
+  letter-spacing: 0.25em;
+
+  margin: 0 0 16px;
+}
+
+.account-hero h1 {
+  margin: 0;
+
+  font:
+    500 clamp(56px, 7vw, 90px) / 0.82
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  letter-spacing: -0.055em;
+}
+
+.account-hero h1 span {
+  color: #c86d69;
+
+  font-style: italic;
+}
+
+.account-subtitle {
+  color: #bba69a;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+
+  margin: 25px 0 0;
+}
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.account-summary-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(145px, 1fr));
+
+  gap: 12px;
+
+  min-width: 360px;
+}
+
+.summary-card {
+  min-width: 0;
+
+  padding: 21px 18px;
+
+  border: 1px solid
+    rgba(239, 215, 194, 0.16);
+
+  border-radius: 12px;
+
+  background: rgba(16, 10, 9, 0.28);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  box-shadow:
+    0 18px 50px
+    rgba(0, 0, 0, 0.15);
+}
+
+.summary-card strong {
+  font:
+    500 38px / 0.9
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  color: #d08a70;
+
+  letter-spacing: -0.02em;
+}
+
+.summary-card span {
+  color: #dbc5b2;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.summary-card small {
+  color: #8f7c70;
+
+  font-size: 8px;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.account-error {
+  width: min(
+    1180px,
+    calc(100% - 60px)
+  );
+
+  margin: 20px auto 0;
+
+  padding: 12px 16px;
+
+  border: 1px solid
+    rgba(195, 91, 91, 0.5);
+
+  background: rgba(
+    139,
+    48,
+    51,
+    0.14
+  );
+
+  color: #d7958c;
+
+  font-size: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border-radius: 8px;
+}
+
+.account-error > span {
+  width: 20px;
+  height: 20px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #a65a5b;
+
+  color: white;
+}
+
+.account-error button {
+  margin-left: auto;
+
+  background: none;
+
+  border: 0;
+
+  color: #d7958c;
+
+  cursor: pointer;
+
+  font-size: 18px;
+}
+
+/* =========================================================
+   PLAN LIMIT
+   ========================================================= */
+
+.plan-limit-banner {
+  width: min(
+    1180px,
+    calc(100% - 60px)
+  );
+
+  margin: 25px auto 0;
+
+  padding: 20px 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border: 1px solid
+    rgba(200, 109, 105, 0.28);
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(142, 75, 70, 0.16),
+      rgba(40, 23, 19, 0.25)
+    );
+}
+
+.plan-limit-banner span {
+  display: block;
+
+  color: #c99778;
+
+  font-size: 8px;
+
+  letter-spacing: 0.18em;
+
+  margin-bottom: 6px;
+}
+
+.plan-limit-banner strong {
+  display: block;
+
+  color: #ead8c8;
+
+  font-size: 12px;
+}
+
+.plan-limit-banner p {
+  margin: 5px 0 0;
+
+  color: #9f887a;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+.plan-limit-button {
+  flex-shrink: 0;
+
+  padding: 11px 15px;
+
+  border: 1px solid
+    rgba(200, 109, 105, 0.4);
+
+  border-radius: 8px;
+
+  background: rgba(
+    200,
+    109,
+    105,
+    0.12
+  );
+
+  color: #e5c5b2 !important;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+.plan-limit-button:hover {
+  background: rgba(
+    200,
+    109,
+    105,
+    0.22
+  );
+}
+
+/* =========================================================
+   BOOTHS
+   ========================================================= */
+
+.booths-section {
+  width: min(
+    1180px,
+    calc(100% - 60px)
+  );
+
+  margin: auto;
+
+  padding: 80px 0 100px;
+}
+
+.section-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 35px;
+
+  margin-bottom: 32px;
+}
+
+.section-header h2 {
+  margin: 0;
+
+  font:
+    500 57px / 0.82
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  letter-spacing: -0.05em;
+}
+
+.section-header em {
+  color: #c86d69;
+}
+
+.section-actions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.create-button {
+  min-height: 48px;
+
+  border: 1px solid #9f4f51;
+
+  background: #a95b5d;
+
+  color: #fff5eb;
+
+  padding: 0 17px;
+
+  border-radius: 8px;
+
+  font:
+    700 9px "DM Sans",
+    sans-serif;
+
+  letter-spacing: 0.12em;
+
+  cursor: pointer;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  box-sizing: border-box;
+}
+
+.create-button:hover {
+  background: #b96869;
+
+  transform: translateY(-1px);
+}
+
+.join-button {
+  min-height: 48px;
+
+  padding: 0 17px;
+
+  cursor: pointer;
+}
+
+.solo-button {
+  min-height: 48px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 12px 30px
+    rgba(23, 19, 19, 0.18);
+}
+
+/* =========================================================
+   BOOTH GRID
+   ========================================================= */
+
+.booth-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.booth-card,
+.add-booth-card {
+  border: 1px solid
+    rgba(239, 215, 194, 0.16);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(103, 69, 55, 0.25),
+      rgba(25, 15, 13, 0.5)
+    );
+
+  min-height: 430px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 20px 55px
+    rgba(0, 0, 0, 0.16);
+}
+
+.booth-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(
+    200,
+    109,
+    105,
+    0.45
+  );
+}
+
+.booth-card-top {
+  height: 52px;
+
+  padding: 0 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom: 1px solid
+    rgba(239, 215, 194, 0.1);
+}
+
+.booth-index {
+  color: #aa9385;
+
+  font:
+    italic 13px "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+.booth-type {
+  font-size: 8px;
+
+  letter-spacing: 0.16em;
+
+  color: #cf7771;
+}
+
+/* =========================================================
+   VISUAL
+   ========================================================= */
+
+.booth-visual {
+  height: 235px;
+
+  position: relative;
+
+  background:
+    linear-gradient(
+      145deg,
+      #9b5d4b,
+      #35211c 72%
+    );
+
+  overflow: hidden;
+}
+
+.visual-camera {
+  position: absolute;
+
+  left: 50%;
+  top: 48%;
+
+  transform:
+    translate(-50%, -50%);
+
+  width: 110px;
+  height: 72px;
+
+  border: 2px solid
+    rgba(245, 224, 201, 0.7);
+
+  border-radius: 12px;
+}
+
+.visual-camera::before {
+  content: "";
+
+  position: absolute;
+
+  left: 35px;
+  top: -14px;
+
+  width: 35px;
+  height: 15px;
+
+  border: 2px solid
+    rgba(245, 224, 201, 0.7);
+
+  border-bottom: 0;
+
+  border-radius:
+    5px 5px 0 0;
+}
+
+.visual-camera::after {
+  content: "";
+
+  position: absolute;
+
+  left: 35px;
+  top: 16px;
+
+  width: 36px;
+  height: 36px;
+
+  border: 6px solid #e5c5a5;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 7px
+    rgba(35, 22, 18, 0.65)
+    inset;
+}
+
+.visual-heart {
+  position: absolute;
+
+  right: 18%;
+  top: 18%;
+
+  color: #d48378;
+
+  font-size: 24px;
+}
+
+.visual-star {
+  position: absolute;
+
+  left: 16%;
+  bottom: 20%;
+
+  color: #d4a17e;
+
+  font-size: 18px;
+}
+
+.visual-person {
+  position: absolute;
+
+  bottom: -15px;
+
+  width: 80px;
+  height: 130px;
+
+  border-radius:
+    45px 45px
+    20px 20px;
+
+  background: #241815;
+}
+
+.person-a {
+  left: 29%;
+}
+
+.person-b {
+  right: 29%;
+}
+
+.visual-orbit {
+  position: absolute;
+
+  inset: 20% 20%;
+
+  border: 1px solid
+    rgba(238, 205, 175, 0.25);
+
+  border-radius: 50%;
+}
+
+.orbit-a {
+  transform: rotate(25deg);
+}
+
+.orbit-b {
+  transform: rotate(-25deg);
+}
+
+.visual-label {
+  position: absolute;
+
+  left: 18px;
+  bottom: 14px;
+
+  color: #ecd9c5;
+
+  font-size: 8px;
+
+  letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.booth-card-content {
+  padding: 18px;
+}
+
+.booth-card-content h3 {
+  margin: 0 0 7px;
+
+  font:
+    400 28px / 1
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  color: #f0dfce;
+}
+
+.booth-card-content p {
+  margin: 0 0 17px;
+
+  color: #a99284;
+
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+.room-code {
+  color: #c99679;
+
+  font-size: 9px;
+
+  letter-spacing: 0.14em;
+}
+
+.room-code span,
+.room-code strong {
+  display: block;
+}
+
+.room-code strong {
+  margin-top: 5px;
+
+  color: #e5c9b5;
+
+  font-size: 15px;
+
+  letter-spacing: 0.16em;
+}
+
+.booth-actions {
+  display: flex;
+
+  gap: 8px;
+
+  margin-top: 12px;
+}
+
+.open-booth,
+.copy-code {
+  border-radius: 7px;
+
+  padding: 10px 13px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.11em;
+
+  box-sizing: border-box;
+}
+
+.open-booth {
+  background: #a95b5d;
+
+  color: #fff4e9;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.open-booth:hover {
+  background: #b96869;
+}
+
+.copy-code {
+  border: 1px solid
+    rgba(239, 215, 194, 0.2);
+
+  color: #cbb5a5;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.02
+  );
+}
+
+.copy-code:hover {
+  border-color: rgba(
+    200,
+    109,
+    105,
+    0.4
+  );
+
+  color: #ead8c8;
+}
+
+/* =========================================================
+   ADD BOOTH
+   ========================================================= */
+
+.add-booth-card {
+  appearance: none;
+
+  width: 100%;
+
+  min-height: 430px;
+
+  padding: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  color: #d8c1ae;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(90, 57, 47, 0.15),
+      rgba(25, 15, 13, 0.28)
+    );
+
+  border-style: dashed;
+
+  cursor: pointer;
+}
+
+.add-booth-card:hover {
+  border-color: rgba(
+    200,
+    109,
+    105,
+    0.5
+  );
+
+  background:
+    rgba(142, 75, 70, 0.12);
+}
+
+.add-booth-card > span {
+  font-size: 32px;
+
+  color: #c86d69;
+}
+
+.add-booth-card strong {
+  font-size: 9px;
+
+  letter-spacing: 0.12em;
+}
+
+.add-booth-card small {
+  color: #8f7c70;
+
+  font-size: 8px;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.empty-booths {
+  padding: 65px 25px;
+
+  text-align: center;
+
+  border: 1px dashed
+    rgba(239, 215, 194, 0.18);
+
+  border-radius: 12px;
+}
+
+.empty-heart {
+  font-size: 38px;
+
+  color: #b96d69;
+}
+
+.empty-booths h3 {
+  margin: 15px 0 8px;
+
+  font:
+    400 31px "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+.empty-booths p {
+  max-width: 480px;
+
+  margin: 0 auto 25px;
+
+  color: #a99284;
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+.empty-actions {
+  display: flex;
+
+  gap: 10px;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   FOOTER MESSAGE
+   ========================================================= */
+
+.account-footer-message {
+  width: min(
+    1180px,
+    calc(100% - 60px)
+  );
+
+  margin: 0 auto 50px;
+
+  padding: 45px 0;
+
+  border-top: 1px solid
+    rgba(239, 215, 194, 0.1);
+
+  text-align: center;
+}
+
+.account-footer-message > span {
+  color: #c86d69;
+
+  font-size: 20px;
+}
+
+.account-footer-message p {
+  margin: 12px 0 0;
+
+  color: #d3bba9;
+
+  font:
+    italic 20px Georgia,
+    serif;
+
+  line-height: 1.5;
+}
+
+.account-footer-message em {
+  color: #c86d69;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.account-footer {
+  width: min(
+    1180px,
+    calc(100% - 60px)
+  );
+
+  margin: auto;
+
+  border-top: 1px solid
+    rgba(239, 215, 194, 0.1);
+
+  padding: 30px 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  color: #8e796d;
+}
+
+.account-footer > span {
+  font-size: 8px;
+
+  letter-spacing: 0.08em;
+}
+
+/* =========================================================
+   MODALS
+   ========================================================= */
+
+.modal-backdrop {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(
+    0,
+    0,
+    0,
+    0.62
+  );
+
+  z-index: 40;
+}
+
+.create-modal {
+  position: fixed;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  z-index: 50;
+
+  width: min(
+    520px,
+    calc(100% - 30px)
+  );
+
+  padding: 30px;
+
+  border: 1px solid
+    rgba(239, 215, 194, 0.2);
+
+  border-radius: 14px;
+
+  background: #2a1c18;
+
+  box-shadow:
+    0 30px 90px
+    rgba(0, 0, 0, 0.55);
+
+  box-sizing: border-box;
+}
+
+.modal-close {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+
+  place-items: center;
+
+  background: none;
+
+  border: 1px solid
+    rgba(239, 215, 194, 0.18);
+
+  border-radius: 50%;
+
+  color: #cdb8a8;
+
+  font-size: 22px;
+
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  border-color: rgba(
+    200,
+    109,
+    105,
+    0.45
+  );
+
+  color: #f0dfce;
+}
+
+.create-modal h2 {
+  margin: 10px 0 25px;
+
+  font:
+    400 43px / 0.95
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+.create-modal h2 em {
+  color: #c86d69;
+}
+
+.create-modal label {
+  display: block;
+
+  margin: 14px 0 7px;
+
+  color: #d5bfad;
+
+  font-size: 8px;
+
+  letter-spacing: 0.12em;
+}
+
+.create-modal input {
+  box-sizing: border-box;
+
+  width: 100%;
+
+  max-width: 100%;
+
+  min-width: 0;
+
+  margin-top: 8px;
+
+  padding: 13px;
+
+  border: 1px solid
+    rgba(239, 215, 194, 0.14);
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background: rgba(
+    20,
+    11,
+    10,
+    0.55
+  );
+
+  color: #f1dfce;
+
+  font:
+    11px / 1.7
+    "DM Sans",
+    Arial,
+    sans-serif;
+}
+
+.create-modal input:focus {
+  border-color: rgba(
+    200,
+    109,
+    105,
+    0.5
+  );
+}
+
+.create-modal input::placeholder {
+  color: #705e56;
+}
+
+/* =========================================================
+   TYPE OPTIONS
+   ========================================================= */
+
+.type-options {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+.type-options > button {
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-columns:
+    28px
+    minmax(0, auto)
+    1fr;
+
+  align-items: center;
+
+  column-gap: 8px;
+
+  row-gap: 2px;
+
+  text-align: left;
+
+  min-height: 76px;
+
+  padding: 14px 16px;
+
+  border: 1px solid
+    rgba(239, 215, 194, 0.14);
+
+  border-radius: 9px;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.02
+  );
+
+  color: #e6d2c0;
+
+  cursor: pointer;
+}
+
+.type-options > button:hover,
+.type-options > button.selected {
+  border-color: rgba(
+    200,
+    109,
+    105,
+    0.55
+  );
+
+  background: rgba(
+    200,
+    109,
+    105,
+    0.12
+  );
+}
+
+.type-options > button > span {
+  display: grid;
+
+  place-items: center;
+
+  grid-row: 1 / span 2;
+
+  color: #c86d69;
+
+  font-size: 17px;
+}
+
+.type-options > button > strong {
+  display: block;
+
+  min-width: 0;
+
+  white-space: nowrap;
+
+  line-height: 1.1;
+
+  font-size: 9px;
+
+  letter-spacing: 0.1em;
+}
+
+.type-options > button > small {
+  display: block;
+
+  min-width: 0;
+
+  color: #806e64;
+
+  font-size: 8px;
+
+  line-height: 1.35;
+}
+
+/* =========================================================
+   MODAL BUTTON
+   ========================================================= */
+
+.modal-create {
+  width: 100%;
+
+  margin-top: 18px;
+
+  min-height: 44px;
+
+  background: #a95b5d;
+
+  color: #fff;
+
+  border: 0;
+
+  padding: 13px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font:
+    700 8px "DM Sans",
+    sans-serif;
+
+  letter-spacing: 0.1em;
+}
+
+.modal-create:hover:not(:disabled) {
+  background: #b96869;
+}
+
+.modal-create:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   JOIN MODAL
+   ========================================================= */
+
+.join-modal {
+  max-width: 520px;
+
+  text-align: center;
+}
+
+.join-modal .account-eyebrow {
+  margin-bottom: 10px;
+}
+
+.join-description {
+  max-width: 390px;
+
+  margin: -8px auto 24px;
+
+  color: #a88e80;
+
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+.join-modal label {
+  text-align: left;
+}
+
+.room-code-input {
+  text-align: center;
+
+  letter-spacing: 0.22em;
+
+  font-size: 1.35rem !important;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.account-loading {
+  min-height: 100vh;
+
+  display: grid;
+
+  place-items: center;
+
+  align-content: center;
+
+  gap: 12px;
+
+  background: #211613;
+
+  color: #d6b9a2;
+}
+
+.loading-mark {
+  color: #c86d69;
+
+  font-size: 28px;
+}
+
+.loading-mark span {
+  margin-left: 2px;
+}
+
+.loading-line {
+  width: 180px;
+
+  height: 1px;
+
+  background: rgba(
+    239,
+    215,
+    194,
+    0.2
+  );
+}
+
+.account-loading p {
+  color: #8f796c;
+
+  font-size: 9px;
+
+  letter-spacing: 0.08em;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 950px) {
+  .account-hero {
+    align-items: flex-start;
+
+    padding: 65px 0;
+
+    flex-direction: column;
+  }
+
+  .account-summary-grid {
+    width: 100%;
+
+    max-width: 500px;
+
+    min-width: 0;
+  }
+
+  .section-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .section-actions {
+    width: 100%;
+
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 800px) {
+  .account-nav,
+  .account-hero,
+  .booths-section,
+  .account-error,
+  .account-footer,
+  .account-footer-message {
+    width: min(
+      calc(100% - 30px),
+      680px
+    );
+  }
+
+  .account-nav {
+    min-height: 68px;
+
+    height: auto;
+
+    padding: 6px 4px;
+
+    gap: 10px;
+  }
+
+  .account-logo {
+    font-size: 15px;
+
+    white-space: nowrap;
+  }
+
+  .account-nav-right {
+    gap: 7px;
+
+    min-width: 0;
+  }
+
+  .user-email {
+    display: none;
+  }
+
+  .logout-button {
+    padding: 9px 10px;
+
+    font-size: 8px;
+  }
+
+  .account-hero {
+    padding: 46px 0 48px;
+  }
+
+  .account-hero h1 {
+    font-size: 64px;
+  }
+
+  .account-summary-grid {
+    width: 100%;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .summary-card {
+    padding: 16px 13px;
+  }
+
+  .summary-card strong {
+    font-size: 34px;
+  }
+
+  .booth-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-actions {
+    justify-content: flex-start;
+  }
+
+  .joined-booths-section {
+    width: calc(100% - 30px);
+
+    padding: 20px;
+
+    margin-bottom: 55px;
+  }
+
+  .type-options {
+    grid-template-columns: 1fr;
+  }
+
+  .account-footer {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .section-header h2 {
+    font-size: 47px;
+  }
+
+  .section-actions {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    width: 100%;
+  }
+
+  .section-actions > * {
+    width: 100%;
+  }
+
+  .empty-actions {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    width: min(
+      100%,
+      350px
+    );
+
+    margin: auto;
+  }
+
+  .empty-actions > * {
+    width: 100%;
+  }
+
+  .plan-limit-banner {
+    width: calc(100% - 30px);
+
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .plan-limit-button {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    text-align: center;
+  }
+
+  .create-modal {
+    top: 50%;
+
+    width: calc(100% - 24px);
+
+    max-height:
+      calc(100dvh - 88px);
+
+    overflow-y: auto;
+
+    padding:
+      54px 18px 20px;
+
+    border-radius: 18px;
+  }
+
+  .modal-close {
+    top: 12px;
+
+    right: 12px;
+  }
+}
+
+@media (max-width: 430px) {
+  .account-summary-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .summary-card strong {
+    font-size: 30px;
+  }
+
+  .account-hero h1 {
+    font-size: 52px;
+  }
+
+  .summary-card {
+    padding: 14px 11px;
+  }
+
+  .summary-card span {
+    font-size: 7px;
+  }
+
+  .summary-card small {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 380px) {
+  .create-modal {
+    width: calc(100% - 16px);
+
+    padding-inline: 14px;
+  }
+
+  .type-options > button {
+    grid-template-columns:
+      25px
+      minmax(0, auto)
+      1fr;
+
+    padding: 12px;
+  }
+}
+
+/* UX polish */
+.account-toast{
+  position:fixed;
+  right:28px;
+  bottom:28px;
+  z-index:12000;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding:12px 16px;
+  border:1px solid rgba(200,109,105,.35);
+  border-radius:999px;
+  background:rgba(36,20,18,.94);
+  color:#f2dfce;
+  box-shadow:0 16px 45px rgba(0,0,0,.25);
+  backdrop-filter:blur(12px);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.04em;
+  animation:account-toast-in .2s ease-out;
+}
+.account-toast span{color:#d48b7d;font-size:13px}
+@keyframes account-toast-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){.account-toast{right:16px;bottom:16px;left:16px;justify-content:center}}
+@media(prefers-reduced-motion:reduce){.account-toast{animation:none}}
+
+
+.solo-card .booth-type { color: #d7a6a0; }
+
+.type-options > button { min-height: 86px; }
+
+@media (max-width: 720px) {
+  .type-options { grid-template-columns: 1fr; }
+}

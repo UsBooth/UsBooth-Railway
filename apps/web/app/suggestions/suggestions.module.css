@@ -1,0 +1,821 @@
+.page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 70% 8%,
+      rgba(181, 105, 80, 0.17),
+      transparent 30rem
+    ),
+    radial-gradient(
+      circle at 20% 45%,
+      rgba(200, 109, 105, 0.07),
+      transparent 28rem
+    ),
+    linear-gradient(
+      145deg,
+      #1c1110,
+      #2b1c18 58%,
+      #140d0c
+    );
+
+  color: #f0dfce;
+
+  padding: 0 6vw 70px;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+}
+
+/* HEADER */
+
+.header {
+  max-width: 1050px;
+
+  height: 78px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid
+    rgba(239, 215, 194, 0.13);
+}
+
+.logo {
+  color: #f0dfce;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  letter-spacing: -0.02em;
+}
+
+.logo span,
+.footer > span span {
+  color: #c86d69;
+}
+
+.headerNav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.headerNav a {
+  color: #9f887a;
+
+  font-size: 9px;
+
+  text-decoration: none;
+
+  transition: color 0.18s ease;
+}
+
+.headerNav a:hover {
+  color: #f0dfce;
+}
+
+/* HERO */
+
+.hero {
+  max-width: 850px;
+
+  margin: auto;
+
+  padding: 105px 0 80px;
+
+  text-align: center;
+}
+
+.eyebrow {
+  color: #c99778;
+
+  font-size: 9px;
+
+  letter-spacing: 0.25em;
+}
+
+.hero h1 {
+  margin: 18px 0 25px;
+
+  font:
+    500 clamp(55px, 8vw, 92px) / 0.86
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+.hero h1 em,
+.sectionHeading h2 em,
+.formIntro h2 em,
+.note h2 em {
+  color: #c86d69;
+
+  font-style: italic;
+}
+
+.hero > p {
+  max-width: 630px;
+
+  margin: auto;
+
+  color: #b9a193;
+
+  font-size: 12px;
+
+  line-height: 1.9;
+}
+
+.heroNote {
+  width: fit-content;
+
+  margin: 28px auto 0;
+
+  padding: 9px 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  border: 1px solid
+    rgba(200, 109, 105, 0.2);
+
+  border-radius: 30px;
+
+  background: rgba(200, 109, 105, 0.06);
+}
+
+.heroNote span {
+  color: #c86d69;
+
+  font-size: 12px;
+}
+
+.heroNote p {
+  margin: 0;
+
+  color: #a99284;
+
+  font-size: 8px;
+
+  letter-spacing: 0.03em;
+}
+
+/* SECTION HEADING */
+
+.ideas {
+  max-width: 950px;
+
+  margin: auto;
+
+  padding-top: 65px;
+
+  border-top: 1px solid
+    rgba(239, 215, 194, 0.12);
+}
+
+.sectionHeading > span,
+.formIntro > span,
+.note > div > span {
+  color: #c99778;
+
+  font-size: 9px;
+
+  letter-spacing: 0.22em;
+}
+
+.sectionHeading h2 {
+  margin: 15px 0 28px;
+
+  font:
+    400 clamp(40px, 5vw, 58px) / 0.95
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+/* CARDS */
+
+.cards {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+.card {
+  width: 100%;
+
+  min-height: 225px;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  text-align: left;
+
+  border: 1px solid
+    rgba(239, 215, 194, 0.13);
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(86, 56, 44, 0.3),
+      rgba(27, 16, 14, 0.46)
+    );
+
+  color: inherit;
+
+  cursor: pointer;
+
+  font: inherit;
+
+  appearance: none;
+
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+
+  border-color:
+    rgba(200, 109, 105, 0.4);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(120, 70, 57, 0.32),
+      rgba(27, 16, 14, 0.5)
+    );
+}
+
+.card.selected {
+  border-color:
+    rgba(200, 109, 105, 0.65);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(120, 70, 57, 0.4),
+      rgba(27, 16, 14, 0.55)
+    );
+
+  box-shadow:
+    0 0 0 1px
+      rgba(200, 109, 105, 0.06);
+}
+
+.cardTop {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.cardIcon {
+  color: #c86d69;
+
+  font-size: 16px;
+}
+
+.cardNumber {
+  color: #79685f;
+
+  font-size: 8px;
+
+  letter-spacing: 0.16em;
+}
+
+.card h3 {
+  margin: 34px 0 9px;
+
+  font:
+    400 31px
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+.card p {
+  max-width: 420px;
+
+  min-height: 36px;
+
+  margin: 0;
+
+  color: #a99284;
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+.card strong {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  color: #d48b7d;
+
+  font-size: 9px;
+
+  letter-spacing: 0.03em;
+}
+
+/* FORM */
+
+.formSection {
+  max-width: 950px;
+
+  margin: 55px auto 0;
+
+  padding: 40px;
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(250px, 0.82fr)
+    minmax(320px, 1.18fr);
+
+  gap: 55px;
+
+  border: 1px solid
+    rgba(200, 109, 105, 0.27);
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(142, 75, 70, 0.11),
+      rgba(50, 27, 23, 0.17)
+    );
+}
+
+.selectedBadge {
+  width: fit-content;
+
+  margin-top: 20px;
+
+  padding: 6px 9px;
+
+  border: 1px solid
+    rgba(200, 109, 105, 0.25);
+
+  border-radius: 20px;
+
+  background: rgba(200, 109, 105, 0.08);
+
+  color: #d18b7e;
+
+  font-size: 7px;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.formIntro h2 {
+  margin: 17px 0;
+
+  font:
+    400 44px / 0.95
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+.formIntro > p {
+  max-width: 360px;
+
+  color: #a88e80;
+
+  font-size: 10px;
+
+  line-height: 1.85;
+}
+
+.formSwitch {
+  margin-top: 28px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid
+    rgba(239, 215, 194, 0.1);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.formSwitch span {
+  color: #75645c;
+
+  font-size: 8px;
+}
+
+.formSwitch button {
+  width: fit-content;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #d48b7d;
+
+  cursor: pointer;
+
+  font: 8px "DM Sans", Arial, sans-serif;
+
+  letter-spacing: 0.03em;
+}
+
+.form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.form label {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.labelTitle {
+  color: #c99778;
+
+  font-size: 8px;
+
+  letter-spacing: 0.16em;
+}
+
+.optional {
+  color: #806e64;
+
+  font-size: 7px;
+
+  letter-spacing: 0.08em;
+}
+
+.form textarea,
+.form input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 13px;
+
+  border: 1px solid
+    rgba(239, 215, 194, 0.14);
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background: rgba(20, 11, 10, 0.55);
+
+  color: #f1dfce;
+
+  font:
+    11px/1.7
+    "DM Sans",
+    Arial,
+    sans-serif;
+}
+
+.form textarea {
+  min-height: 155px;
+
+  resize: vertical;
+}
+
+.form textarea:focus,
+.form input:focus {
+  border-color:
+    rgba(200, 109, 105, 0.5);
+
+  background: rgba(20, 11, 10, 0.7);
+}
+
+.form textarea::placeholder,
+.form input::placeholder {
+  color: #705e56;
+}
+
+.form label > small {
+  align-self: flex-end;
+
+  margin-top: -4px;
+
+  color: #705e56;
+
+  font-size: 7px;
+}
+
+.submit {
+  min-height: 43px;
+
+  margin-top: 2px;
+
+  border: 0;
+
+  border-radius: 8px;
+
+  background: #a95b5d;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease;
+}
+
+.submit:hover:not(:disabled) {
+  background: #b96869;
+
+  transform: translateY(-1px);
+}
+
+.submit:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
+
+.messageError,
+.messageSuccess {
+  padding: 11px 13px;
+
+  border-radius: 8px;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+}
+
+.messageError {
+  border: 1px solid
+    rgba(200, 109, 105, 0.25);
+
+  background: rgba(200, 109, 105, 0.07);
+
+  color: #d48b7d;
+}
+
+.messageSuccess {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  border: 1px solid
+    rgba(201, 151, 120, 0.2);
+
+  background: rgba(201, 151, 120, 0.06);
+
+  color: #c99778;
+}
+
+.messageSuccess span {
+  color: #9f887a;
+}
+
+/* NOTE */
+
+.note {
+  max-width: 950px;
+
+  margin: 70px auto 0;
+
+  padding: 35px 0;
+
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: 50px;
+
+  border-top: 1px solid
+    rgba(239, 215, 194, 0.12);
+
+  border-bottom: 1px solid
+    rgba(239, 215, 194, 0.12);
+}
+
+.note h2 {
+  margin: 15px 0 0;
+
+  font:
+    400 44px / 0.95
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+.note p {
+  margin: 0 0 15px;
+
+  color: #a88e80;
+
+  font-size: 11px;
+
+  line-height: 1.9;
+}
+
+.note p:last-child {
+  margin-bottom: 0;
+
+  color: #c99778;
+}
+
+/* FOOTER */
+
+.footer {
+  max-width: 950px;
+
+  margin: 30px auto 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.footer > div {
+  display: flex;
+
+  gap: 25px;
+}
+
+.footer a {
+  color: #9e887a;
+
+  font-size: 9px;
+
+  text-decoration: none;
+
+  transition: color 0.18s ease;
+}
+
+.footer a:hover {
+  color: #d48b7d;
+}
+
+.footer > span {
+  color: #9f887a;
+
+  font-size: 8px;
+
+  letter-spacing: 0.08em;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .formSection,
+  .note {
+    grid-template-columns: 1fr;
+  }
+
+  .formSection {
+    gap: 35px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .page {
+    padding:
+      0 20px
+      50px;
+  }
+
+  .header {
+    height: 68px;
+  }
+
+  .headerNav {
+    gap: 12px;
+  }
+
+  .headerNav a {
+    font-size: 8px;
+  }
+
+  .hero {
+    padding-top: 75px;
+  }
+
+  .hero h1 {
+    font-size: 55px;
+  }
+
+  .heroNote {
+    max-width: 90%;
+  }
+
+  .formSection {
+    padding: 25px;
+  }
+
+  .note {
+    gap: 25px;
+  }
+
+  .footer > div {
+    flex-wrap: wrap;
+
+    gap: 14px;
+  }
+}
+
+
+/* DREAMY SUGGESTION BOX — handwritten-note feeling */
+.page{
+  background:
+    radial-gradient(circle at 12% 10%,rgba(232,200,205,.34),transparent 25rem),
+    radial-gradient(circle at 88% 70%,rgba(201,192,216,.30),transparent 27rem),
+    linear-gradient(180deg,#FBF7F2,#F6EEF0 55%,#EEEAF2);
+  color:#44373F;
+}
+.header{border-color:#E1D5D8}.logo{color:#44373F}.logo span,.footer>span span{color:#8B3F50}
+.headerNav a{color:#85757C}.headerNav a:hover{color:#8B3F50}
+.hero h1,.sectionHeading h2,.formIntro h2,.note h2{color:#40343B}
+.eyebrow,.sectionHeading>span,.formIntro>span,.note>div>span{color:#9A6B78}
+.hero h1 em,.sectionHeading h2 em,.formIntro h2 em,.note h2 em{color:#875267}
+.hero>p{color:#8D7D84}
+.heroNote{border-color:#DFC6CD;background:rgba(232,200,205,.24)}
+.heroNote span{color:#8B3F50}.heroNote p{color:#8C7A82}
+.ideas,.form{border-color:#E1D5D8}
+.card{
+  border-color:#E0D3D7!important;
+  background:rgba(255,253,250,.70)!important;
+  color:#44373F!important;
+  box-shadow:0 16px 45px rgba(72,50,60,.08);
+}
+.card:hover,.card.selected{
+  border-color:#C69DA7!important;
+  background:linear-gradient(145deg,#F8E9EB,#EEE9F2)!important;
+  box-shadow:0 20px 55px rgba(72,50,60,.11);
+}
+.card>span{color:#9A6B78}.card h3{color:#4A3941}.card p{color:#897980}
+.card strong{border-color:#D5B7BF;color:#8B3F50;background:rgba(139,63,80,.06)}
+.formCard,.formPanel,.note{
+  border-color:#E0D3D7!important;
+  background:rgba(255,253,250,.74)!important;
+  color:#44373F!important;
+  box-shadow:0 18px 55px rgba(72,50,60,.09);
+}
+form.formCard textarea,form.formCard input,form.formPanel textarea,form.formPanel input{background:#FFFDFC!important;color:#44373F!important;border-color:#DCCED2!important}
+form.formCard textarea:focus,form.formCard input:focus,form.formPanel textarea:focus,form.formPanel input:focus{border-color:#B98A98!important;box-shadow:0 0 0 3px rgba(139,63,80,.08)!important}
+.submit,.primary{background:#8B3F50!important;color:#FFF!important}
+
+
+/* ZIP DREAM PALETTE — suggestions */
+.page{background:radial-gradient(circle at 8% 5%,rgba(200,109,105,.14),transparent 27rem),radial-gradient(circle at 90% 60%,rgba(201,151,120,.10),transparent 28rem),linear-gradient(180deg,#211613,#30211D 55%,#241714)!important;color:#E7D4BA!important}.header{border-color:#76534C!important}.logo{color:#F3E5D2!important}.logo span,.footer>span span{color:#D48B7D!important}.headerNav a{color:#BCA28C!important}.headerNav a:hover{color:#D48B7D!important}.hero h1,.sectionHeading h2,.formIntro h2,.note h2{color:#F3E5D2!important}.eyebrow,.sectionHeading>span,.formIntro>span,.note>div>span{color:#C99778!important}.hero h1 em,.sectionHeading h2 em,.formIntro h2 em,.note h2 em{color:#D48B7D!important}.hero>p,.formIntro>p,.note p{color:#BCA28C!important}.ideas,.form,.formCard,.formPanel,.note{border-color:#76534C!important}.card{background:#46312A!important;border-color:#76534C!important;color:#E7D4BA!important;box-shadow:0 18px 50px rgba(15,9,7,.22)!important}.card:hover,.card.selected{background:linear-gradient(145deg,#50372E,#3A2823)!important;border-color:#C86D69!important}.card h3{color:#F3E5D2!important}.card p{color:#BCA28C!important}.formCard,.formPanel,.note{background:#3A2823!important;color:#E7D4BA!important;box-shadow:0 18px 55px rgba(15,9,7,.22)!important}.formCard textarea,.formCard input,.formPanel textarea,.formPanel input{background:#211613!important;color:#F3E5D2!important;border-color:#76534C!important}.submit,.primary{background:#C86D69!important;color:#FFF8EF!important}
