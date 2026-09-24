@@ -1,0 +1,31 @@
+{
+  "name": "usbooth",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "npm --workspace apps/web run dev",
+    "build": "npm --workspace apps/web run build",
+    "start": "npm --workspace apps/web run start",
+    "db:push": "drizzle-kit push --config=database/drizzle.config.ts",
+    "db:generate": "drizzle-kit generate --config=database/drizzle.config.ts",
+    "db:migrate": "drizzle-kit migrate --config=database/drizzle.config.ts"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "argon2": "^0.41.1",
+    "drizzle-orm": "^0.44.5",
+    "jose": "^6.1.0",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.15.5",
+    "drizzle-kit": "^0.31.4",
+    "dotenv": "^17.2.2"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}

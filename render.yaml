@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: usbooth-web
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run db:push && npm --workspace apps/web run build
+    startCommand: npm --workspace apps/web run start
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: NEXT_PUBLIC_APP_URL
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: AUTH_SECRET
+        sync: false
+
